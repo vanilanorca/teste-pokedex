@@ -6,14 +6,12 @@ const app = express();
 
 // Serve only the static files form the dist directory
 app.use(
-  express.static(path.join(__dirname, "../client/dist/pokedex-synvia"), {
+  express.static(path.join(__dirname, "dist/pokedex-synvia"), {
     maxAge: "1y",
   })
 );
 
-app.get("*", (req, res) =>
-  res.sendFile(__dirname, "../client/dist/pokedex-synvia/index.html")
-);
+app.get("*", (req, res) => res.sendFile(__dirname, "dist/pokedex-synvia", "index.html"));
 
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);

@@ -10,15 +10,12 @@
   },
   "heroku-postbuild": "npm install && npm run --prefix client build --prod",
   "engines": {
-    "node": "16.13.0",
-    "npm": "8.1.0"
+    "node": "16.x"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.0.0",
     "@angular/common": "~13.0.0",
-    "@angular/compiler": "~13.0.0",
-    "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
     "@angular/core": "~13.0.0",
     "@angular/forms": "~13.0.0",
